@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+   
+
+  
+<div class="container">
+    <h1>Átváltó</h1>
+    <form name="urlap">
+       
+        <div>
+        <label for="kapacitas">Kapacitás:</label>
+        <input type="text" name="kapacitas" id="kapacitas">
+        <select name="kivalasztas" id="kivalasztas">
+            <option value="1">KB</option>
+            <option value="1000" selected>MB</option>
+            <option value="1000000">GB</option>
+            <option value="1000000000">TB</option>
+        </select>
+    </div>
+    <div>
+     <hr>
+        <label for="sebesseg">Átviteli sebesség:</label>
+        <input type="range" value="10" min="10" max="5000" id="slider" value="3200" onchange="slrValtozo()">
+        <span id="sliderErteke">10</span>
+        <select name="ksebesseg" id="ksebesseg">
+            <option value="1">KBps</option>
+            <option value="1000" selected>MBps</option>
+            <option value="1000000">GBps</option>
+        </select>
+    </div>
+    <div>
+        <hr>
+        <input type="button" value="Számol" id="btnSzamol" onclick="btnKiszamol()" >
+    </div>
+   
+    </form>
+    <span id="eredM"></span>
+</div>
+     
+
+</body>
+<script src="java.js"></script>
+</html>
